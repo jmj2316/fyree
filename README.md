@@ -129,6 +129,10 @@ Related work by the author: [Sonny](https://arxiv.org/abs/2603.21284) (StepsNet 
 
 The SeasFire datacube is provided by the SeasFire project. The TeleViT baseline follows the original implementation at [Orion-AI-Lab/televit](https://github.com/Orion-AI-Lab/televit).
 
+## License
+
+Released under the [MIT License](LICENSE).
+
 ## Contact
 
 Minjong Cheon, Department of Computer Science, Korea National Open University — jmj2316@mail.knou.ac.kr
