@@ -114,13 +114,6 @@ The run directory name `v4_noanchor` is the main Fyree model throughout the code
 
 ## Citation
 
-```bibtex
-@article{cheon2026fyree,
-  author  = {Cheon, Minjong},
-  title   = {Fire memory enables global wildfire forecasts that beat climatology up to four months ahead},
-  journal = {Submitted to npj Natural Hazards},
-  year    = {2026}
-}
 ```
 
 Related work by the author: [Sonny](https://arxiv.org/abs/2603.21284) (StepsNet backbone), [Rescene](https://arxiv.org/abs/2608.09971) (dual-clock design), [KAN-SAE](https://arxiv.org/abs/2605.17493) (sparse-autoencoder interpretation).
