@@ -1,5 +1,5 @@
 """학습된 best.pt를 test에 다시 평가하고 예측(test_preds.npz)을 저장.
-사용: python -m fyree.eval_ckpt --run_dir runs/v4_noanchor --device cuda:0"""
+사용: python -m pyree.eval_ckpt --run_dir runs/v4_noanchor --device cuda:0"""
 import argparse
 import json
 from pathlib import Path
@@ -8,10 +8,10 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader
 
-from fyree import train_v2 as TR
-from fyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
-from fyree.model import WildfireStepsNet
-from fyree.model_televit import TeleViT
+from pyree import train_v2 as TR
+from pyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
+from pyree.model import WildfireStepsNet
+from pyree.model_televit import TeleViT
 
 DEFAULTS = {"arch": "stepsnet", "basic_inputs": False, "tslf": False, "recency_tau": None,
             "anom_windows": [], "long_fire": False, "ema": 0.0, "drop": []}

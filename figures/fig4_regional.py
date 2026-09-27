@@ -12,7 +12,7 @@ from common import LEADS, OUT, ROOT, panel_label, save, style
 from mapdata import TILE, load, preds_on_tiles
 
 sys.path.insert(0, str(ROOT))
-from fyree.bootstrap import ap_from_counts, block_hist  # noqa: E402
+from pyree.bootstrap import ap_from_counts, block_hist  # noqa: E402
 
 REG = ["BONA", "TENA", "CEAM", "NHSA", "SHSA", "EURO", "MIDE", "NHAF", "SHAF", "BOAS", "CEAS",
        "SEAS", "EQAS", "AUST"]
@@ -86,9 +86,9 @@ def main():
     panel_label(ax0, "a", x=-0.06)
 
     # (b-d) 히트맵
-    comps = [("ours-televit", r"Fyree − TeleViT$_{i,g}$"),
+    comps = [("ours-televit", r"Pyree − TeleViT$_{i,g}$"),
              ("televit-clim", r"TeleViT$_{i,g}$ − climatology"),
-             ("ours-clim", "Fyree − climatology")]
+             ("ours-clim", "Pyree − climatology")]
     rows = [r for r in REG if all(f"{r}|{h}" in res for h in LEADS)]
     vmax = max(abs(res[f"{r}|{h}"][k]) for r in rows for h in LEADS for k, _ in comps)
     norm = TwoSlopeNorm(vcenter=0, vmin=-vmax * 100, vmax=vmax * 100)

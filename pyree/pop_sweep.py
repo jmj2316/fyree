@@ -2,7 +2,7 @@
 재학습 없음. 육지이면서 원래 인구값이 있는 픽셀만 개입 (바다·결측 픽셀은 그대로).
 바이옴 그룹별 평균 예측 확률(부분의존 곡선), 리드 1 / 16.
 
-사용: python -m fyree.pop_sweep --run_dir runs/v4_noanchor --n_per_lead 1000
+사용: python -m pyree.pop_sweep --run_dir runs/v4_noanchor --n_per_lead 1000
 """
 import argparse
 import json
@@ -12,9 +12,9 @@ import numpy as np
 import torch
 import xarray as xr
 
-from fyree.dataset_v2 import OCI_VARS, TILE, ZARR, SeasFireStore, SeasFireV2, variables
-from fyree.eval_ckpt import DEFAULTS
-from fyree.model import WildfireStepsNet
+from pyree.dataset_v2 import OCI_VARS, TILE, ZARR, SeasFireStore, SeasFireV2, variables
+from pyree.eval_ckpt import DEFAULTS
+from pyree.model import WildfireStepsNet
 
 POP_GRID = [0, 0.3, 1, 3, 10, 30, 100, 300, 1000, 3000]  # 명/km²
 BIOME_GROUPS = {

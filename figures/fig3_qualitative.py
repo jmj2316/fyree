@@ -74,7 +74,7 @@ def main():
     thr = thresholds(md, needs)
 
     cols = ["Observed\nburned area", "Climatology\nprior", "TeleViT$_{i,g}$\n(reproduced)",
-            "Fyree", "TeleViT$_{i,g}$\nerrors", "Fyree\nerrors"]
+            "Pyree", "TeleViT$_{i,g}$\nerrors", "Pyree\nerrors"]
     fig, axes = plt.subplots(len(rows), 6, figsize=(7.2, 4.35), gridspec_kw={"wspace": 0.04,
                                                                             "hspace": 0.1})
     pcmap = plt.get_cmap("YlOrRd").copy()

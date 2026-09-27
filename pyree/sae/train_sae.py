@@ -1,7 +1,7 @@
 """Step-1 활성에 SAE 학습: TopK(SAE-Xplainers 기준선) / NoClamp B-spline KAN-SAE / JumpReLU.
 평가: 설명분산(EV), L0, dead feature 비율 — 학습 분포 밖인 test(2019) 토큰에서도.
 
-사용: python -m fyree.sae.train_sae --run_dir runs/v4_noanchor --variant topk
+사용: python -m pyree.sae.train_sae --run_dir runs/v4_noanchor --variant topk
 """
 import argparse
 import json
@@ -10,7 +10,7 @@ from pathlib import Path
 import torch
 import torch.nn as nn
 
-from fyree.sae.sae_models import JumpReLUSAE, LinearSAE, NoClampBSplineSAE
+from pyree.sae.sae_models import JumpReLUSAE, LinearSAE, NoClampBSplineSAE
 
 
 def build(variant, d, dict_size, k, l0_coeff):

@@ -16,11 +16,11 @@ import numpy as np
 import torch
 from sklearn.metrics import average_precision_score
 
-from fyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
-from fyree.eval_ckpt import DEFAULTS
-from fyree.model import WildfireStepsNet
-from fyree.sae.interpret import load_sae
-from fyree.sae.tools import finish_forward, step1_forward, steer
+from pyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
+from pyree.eval_ckpt import DEFAULTS
+from pyree.model import WildfireStepsNet
+from pyree.sae.interpret import load_sae
+from pyree.sae.tools import finish_forward, step1_forward, steer
 
 CONCEPTS = {  # (연산, 값, 0-1 범위로 자를지)
     "clim_target": ("mul", 1.5, True),

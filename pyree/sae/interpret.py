@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from fyree.sae.train_sae import build
+from pyree.sae.train_sae import build
 
 CONCEPTS = ["fire_tslf", "clim_target", "fire_recent46", "fire_issue", "gmsst",
             "anom_tp_w24", "anom_swvl1_w12", "anom_vpd_w4", "ndvi", "swvl1", "ybar"]

@@ -26,7 +26,7 @@ import torch
 import xarray as xr
 from torch.utils.data import Dataset
 
-from fyree.fire_prior import STEPS_PER_YEAR, FirePrior
+from pyree.fire_prior import STEPS_PER_YEAR, FirePrior
 
 ZARR = os.environ.get("SEASFIRE_ZARR", "data/SeasFireCube_v3.zarr")
 INPUT_VARS = ["lst_day", "mslp", "ndvi", "pop_dens", "ssrd", "sst", "swvl1",

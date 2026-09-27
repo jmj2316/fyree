@@ -79,7 +79,7 @@ lab_ms = [("ours", lat["ours_ms_per_batch64"]), ("televit_repro", lat["televit_m
 cx.barh([1, 0], [v for _, v in lab_ms], color=[COLORS[k] for k, _ in lab_ms], height=0.55)
 for yv, (_, v) in zip([1, 0], lab_ms):
     cx.text(v + 0.8, yv, f"{v:.1f} ms", va="center", fontsize=7)
-cx.set_yticks([1, 0], ["Fyree", "TeleViT$_{i,g}$\n(reproduced)"], fontsize=7)
+cx.set_yticks([1, 0], ["Pyree", "TeleViT$_{i,g}$\n(reproduced)"], fontsize=7)
 cx.set_xlabel("Inference time per 64 tiles (ms, A40, fp16)")
 cx.set_xlim(0, max(v for _, v in lab_ms) * 1.3)
 panel_label(cx, "c", x=-0.42)

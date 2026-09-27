@@ -1,4 +1,4 @@
-"""Fyree 구조도 (Sonny 2-Steps Network 스타일): 범례 줄 + 가로 파이프라인. 제목 없음, 영어."""
+"""Pyree 구조도 (Sonny 2-Steps Network 스타일): 범례 줄 + 가로 파이프라인. 제목 없음, 영어."""
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, FancyArrowPatch, FancyBboxPatch
 

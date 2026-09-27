@@ -10,7 +10,7 @@ from matplotlib.lines import Line2D
 from common import OUT, ROOT, RUNS, panel_label, save, style
 
 sys.path.insert(0, str(ROOT))
-from fyree.sae.interpret import load_sae  # noqa: E402
+from pyree.sae.interpret import load_sae  # noqa: E402
 
 SDIR = RUNS / "v4_noanchor" / "sae"
 SAES = [("topk", "TopK"), ("jumprelu_l01.0", "JumpReLU"), ("kan", "KAN (B-spline)")]

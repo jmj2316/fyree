@@ -73,7 +73,7 @@ def main():
     bx.set_yticks(range(len(names)), [f"{k + 1} {SHORT[n]}" for k, n in enumerate(names)], fontsize=6.3)
     bx.set_xlabel("Lead time (× 8 days)")
     cb = fig.colorbar(im, ax=bx, fraction=0.05, pad=0.03)
-    cb.set_label(r"$\Delta$AUPRC, Fyree − TeleViT$_{i,g}$ (pp)", fontsize=6.8)
+    cb.set_label(r"$\Delta$AUPRC, Pyree − TeleViT$_{i,g}$ (pp)", fontsize=6.8)
     cb.ax.tick_params(labelsize=6.3)
     panel_label(bx, "b", x=-0.55)
 
@@ -95,7 +95,7 @@ def main():
         cx.set_xticks(x[::step], [s[5:] for s in ts["dates"][::step]], fontsize=6.3)
         cx.set_ylabel("Burned pixels (0.25°)", fontsize=7)
         k = names.index(n)
-        cx.text(0.02, 0.97, f"{k + 1}. {n}\nAUPRC Fyree {d['ours_auprc']:.2f} · TeleViT "
+        cx.text(0.02, 0.97, f"{k + 1}. {n}\nAUPRC Pyree {d['ours_auprc']:.2f} · TeleViT "
                 f"{d['televit_auprc']:.2f} · clim {d['clim_auprc']:.2f}",
                 transform=cx.transAxes, va="top", fontsize=6.2,
                 bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="none", alpha=0.85))

@@ -17,16 +17,16 @@ rows.append(("TeleViT_i,g, published (digitized from Fig. 2)", {h: (paper[h], No
 rows.append(("TeleViT_i,g, reproduced (one model per lead)",
              {h: (test_auprc(f"televit_orig_h{h}")[h]["auprc"], test_auprc(f"televit_orig_h{h}")[h]["brier"])
               for h in LEADS}))
-named = [("televit_info", "TeleViT_i,g backbone + Fyree inputs"),
-         ("v2_full", "Fyree development v2: logit anchor + fire memory (uniform climatology)"),
-         ("v3_anom", "Fyree development v3: + accumulated anomalies + 1-yr burn frequency"),
-         ("v4_anchor", "Fyree, logit-anchored"),
-         ("v4_noanchor", "Fyree (main model)"),
-         ("abl_nofire", "Ablation: Fyree − fire history"),
-         ("abl_noclim", "Ablation: Fyree − climatology channels"),
-         ("abl_noanom", "Ablation: Fyree − accumulated anomalies"),
-         ("abl_nooci", "Ablation: Fyree − teleconnection indices"),
-         ("abl_notau", "Ablation: Fyree − recency weighting")]
+named = [("televit_info", "TeleViT_i,g backbone + Pyree inputs"),
+         ("v2_full", "Pyree development v2: logit anchor + fire memory (uniform climatology)"),
+         ("v3_anom", "Pyree development v3: + accumulated anomalies + 1-yr burn frequency"),
+         ("v4_anchor", "Pyree, logit-anchored"),
+         ("v4_noanchor", "Pyree (main model)"),
+         ("abl_nofire", "Ablation: Pyree − fire history"),
+         ("abl_noclim", "Ablation: Pyree − climatology channels"),
+         ("abl_noanom", "Ablation: Pyree − accumulated anomalies"),
+         ("abl_nooci", "Ablation: Pyree − teleconnection indices"),
+         ("abl_notau", "Ablation: Pyree − recency weighting")]
 for run, lab in named:
     if (RUNS / run / "results.json").exists():
         r = test_auprc(run)

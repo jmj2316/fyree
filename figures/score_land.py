@@ -9,7 +9,7 @@ from common import LEADS, OUT, ROOT, RUNS
 from mapdata import TILE, load
 
 sys.path.insert(0, str(ROOT))
-from fyree.bootstrap import ap_from_counts, block_hist  # noqa: E402
+from pyree.bootstrap import ap_from_counts, block_hist  # noqa: E402
 
 CACHE = OUT / "work" / "land_scores.json"
 N_BOOT = 1000

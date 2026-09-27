@@ -4,7 +4,7 @@ Integrated Gradients: v4 모델의 test 샘플에서 입력 채널(46)과 OCI(10
 기준점 = 0 (정규화 입력의 평균, 화재 없음, 기후값 0). 위치(sin/cos)와 리드는 실제값 고정(기여 대상 아님).
 완전성(기여 합 = f(x) − f(기준점)) 확인.
 
-사용: python -m fyree.attribution --run_dir runs/v4_noanchor --n_per_lead 384
+사용: python -m pyree.attribution --run_dir runs/v4_noanchor --n_per_lead 384
 """
 import argparse
 from pathlib import Path
@@ -12,10 +12,10 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from fyree import train_v2 as TR
-from fyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
-from fyree.eval_ckpt import DEFAULTS
-from fyree.model import WildfireStepsNet
+from pyree import train_v2 as TR
+from pyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
+from pyree.eval_ckpt import DEFAULTS
+from pyree.model import WildfireStepsNet
 
 
 def main():

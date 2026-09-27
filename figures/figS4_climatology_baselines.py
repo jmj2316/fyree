@@ -1,4 +1,4 @@
-"""Fig.S4: TeleViT1.0(저널판, 전체 패치) 공개값 vs 기후값 정의별 AUPRC vs Fyree (전체 육지, 2019)."""
+"""Fig.S4: TeleViT1.0(저널판, 전체 패치) 공개값 vs 기후값 정의별 AUPRC vs Pyree (전체 육지, 2019)."""
 import json
 
 import matplotlib.pyplot as plt

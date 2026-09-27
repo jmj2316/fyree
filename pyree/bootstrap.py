@@ -6,7 +6,7 @@ AUPRC를 계산한다 (같은 구간 안의 동률 처리 = sklearn의 동일 th
 구간은 비교 대상 전체 예측의 합동 분위수 20k개라, 점추정 오차는 출력에서 exact와 함께 확인.
 
 사용:
-  python -m fyree.bootstrap --a runs/v4_noanchor/test_preds.npz \
+  python -m pyree.bootstrap --a runs/v4_noanchor/test_preds.npz \
       --b runs/televit_orig_h1/test_preds.npz --leads 1
 """
 import argparse

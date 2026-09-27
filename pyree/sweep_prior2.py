@@ -3,9 +3,9 @@ A) train 연도 2002-2017 고정 prior (val/test 모두 동일 prior) — 선택
 B) 참고용 '운영형' prior: test 예보 시 이미 관측된 2018까지 포함 (2002-2018)."""
 import json
 
-from fyree.baselines import load_fire
-from fyree.fire_prior import FirePrior
-from fyree.sweep_prior import positive_tiles, score
+from pyree.baselines import load_fire
+from pyree.fire_prior import FirePrior
+from pyree.sweep_prior import positive_tiles, score
 
 
 def main():

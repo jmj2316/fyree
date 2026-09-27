@@ -5,8 +5,8 @@ import json
 import numpy as np
 from sklearn.metrics import average_precision_score
 
-from fyree.baselines import TILE, load_fire, split_indices
-from fyree.fire_prior import FirePrior
+from pyree.baselines import TILE, load_fire, split_indices
+from pyree.fire_prior import FirePrior
 
 
 def positive_tiles(fire, times, split):

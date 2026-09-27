@@ -5,9 +5,9 @@ import time
 
 import torch
 
-from fyree.dataset_v2 import OCI_VARS, variables
-from fyree.model import WildfireStepsNet
-from fyree.model_televit import TeleViT
+from pyree.dataset_v2 import OCI_VARS, variables
+from pyree.model import WildfireStepsNet
+from pyree.model_televit import TeleViT
 
 
 def bench(fn, n_warm=10, n=50):
@@ -42,7 +42,7 @@ def main():
     tvi = TeleViT(in_channels=len(names), global_in_channels=14, use_lead=True)
     res["televit_info_params_M"] = sum(p.numel() for p in tvi.parameters()) / 1e6
     print(json.dumps(res, indent=1))
-    with open(os.path.join(os.environ.get("FYREE_RUNS", "runs"), "latency.json"), "w") as f:
+    with open(os.path.join(os.environ.get("PYREE_RUNS", "runs"), "latency.json"), "w") as f:
         json.dump(res, f, indent=1)
 
 

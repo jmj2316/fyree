@@ -354,4 +354,4 @@ class WildfireStepsNet(nn.Module):
 
 
 # Public name used in the paper.
-Fyree = WildfireStepsNet
+Pyree = WildfireStepsNet

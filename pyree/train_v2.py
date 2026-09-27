@@ -5,7 +5,7 @@ v2 학습: 기후값-앵커 잔차 + fire memory + 리드 조건부 단일 모�
 리드별로 AUPRC, Brier, 기후값 대비 BSS, 같은 샘플에서의 기후값 AUPRC를 함께 기록.
 
 사용:
-  python -m fyree.train_v2 --out_dir runs/v2_anchor --device cuda:0
+  python -m pyree.train_v2 --out_dir runs/v2_anchor --device cuda:0
 """
 import argparse
 import copy
@@ -20,9 +20,9 @@ from torch.utils.data import DataLoader, RandomSampler
 
 from torch import nn
 
-from fyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
-from fyree.model import WildfireStepsNet
-from fyree.model_televit import TeleViT
+from pyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
+from pyree.model import WildfireStepsNet
+from pyree.model_televit import TeleViT
 
 
 def parse_args():

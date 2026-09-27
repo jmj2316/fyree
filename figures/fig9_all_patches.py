@@ -36,7 +36,7 @@ for (split, yr, ls), dx in zip(YEARS, (-0.07, 0.07)):
     cx.errorbar(x + dx, m, yerr=[m - ci[:, 0], ci[:, 1] - m], fmt="o", ls=ls, color=COLORS["televit_repro"],
                 ms=3.5, lw=1.2, capsize=2)
 cx.axhline(0, color="k", lw=0.7)
-cx.text(0.97, 0.95, r"Fyree − TeleViT$_{i,g}$", transform=cx.transAxes, ha="right", va="top", fontsize=7)
+cx.text(0.97, 0.95, r"Pyree − TeleViT$_{i,g}$", transform=cx.transAxes, ha="right", va="top", fontsize=7)
 cx.set_ylabel(r"Paired $\Delta$AUPRC (95% CI)")
 panel_label(cx, "c", x=-0.3)
 

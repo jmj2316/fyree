@@ -1,7 +1,7 @@
 """v4 모델의 Step-1(slow path) 출력 토큰 수집 + 토큰별 입력 메타데이터.
 토큰 하나 = 4x4 픽셀 패치. 메타: 46개 입력 채널의 패치 평균, 탄 비율, 샘플의 리드/시점/GMSST.
 
-사용: python -m fyree.sae.collect_step1 --run_dir runs/v4_noanchor --n_train 6000 --n_test 2000
+사용: python -m pyree.sae.collect_step1 --run_dir runs/v4_noanchor --n_train 6000 --n_test 2000
 """
 import argparse
 from pathlib import Path
@@ -10,10 +10,10 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-from fyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
-from fyree.eval_ckpt import DEFAULTS
-from fyree.model import WildfireStepsNet
-from fyree.sae.tools import finish_forward, step1_forward
+from pyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
+from pyree.eval_ckpt import DEFAULTS
+from pyree.model import WildfireStepsNet
+from pyree.sae.tools import finish_forward, step1_forward
 
 
 @torch.no_grad()

@@ -37,8 +37,8 @@ ax.set_ylabel("Test AUPRC (2020, held out)")
 ax.grid(axis="y", lw=0.4, alpha=0.4)
 panel_label(ax, "a", x=-0.16)
 
-for key, lab, col, dx in [("A-B", "Fyree − TeleViT$_{i,g}$ (reproduced)", COLORS["televit_repro"], -0.12),
-                          ("A-clim", "Fyree − climatology", COLORS["clim_recency"], 0.0),
+for key, lab, col, dx in [("A-B", "Pyree − TeleViT$_{i,g}$ (reproduced)", COLORS["televit_repro"], -0.12),
+                          ("A-clim", "Pyree − climatology", COLORS["clim_recency"], 0.0),
                           ("B-clim", "TeleViT$_{i,g}$ (reproduced) − climatology", COLORS["televit_info"], 0.12)]:
     m = np.array([bt[h][key] for h in LEADS])
     ci = np.array([bt[h][f"{key}_ci"] for h in LEADS])
@@ -61,8 +61,8 @@ save(fig, "figS1_2020_heldout")
 rows = [("Climatology, 2002–2017 mean", {h: (clim_uni, None) for h in LEADS}),
         ("Climatology, recency-weighted", {h: (clim_rec, ours[h]["clim_brier"]) for h in LEADS}),
         ("TeleViT_i,g, reproduced", {h: (tv[h]["auprc"], tv[h]["brier"]) for h in LEADS})]
-for run, lab in [("televit_info", "TeleViT_i,g backbone + Fyree inputs"), ("v4_anchor", "Fyree, logit-anchored"),
-                 ("v4_noanchor", "Fyree (main)"), ("abl_nofire", "Ablation: − fire history"),
+for run, lab in [("televit_info", "TeleViT_i,g backbone + Pyree inputs"), ("v4_anchor", "Pyree, logit-anchored"),
+                 ("v4_noanchor", "Pyree (main)"), ("abl_nofire", "Ablation: − fire history"),
                  ("abl_noclim", "Ablation: − climatology channels"), ("abl_noanom", "Ablation: − anomalies"),
                  ("abl_nooci", "Ablation: − OCIs"), ("abl_notau", "Ablation: − recency weighting")]:
     r = ev(run)

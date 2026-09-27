@@ -11,7 +11,7 @@ from common import LEADS, OUT, ROOT, RUNS
 from mapdata import TILE, load
 
 sys.path.insert(0, str(ROOT))
-from fyree.bootstrap import ap_from_counts, block_hist  # noqa: E402
+from pyree.bootstrap import ap_from_counts, block_hist  # noqa: E402
 
 EVENTS = [
     # 이름, (위도 최소, 최대, 경도 최소, 최대), (시작, 끝)

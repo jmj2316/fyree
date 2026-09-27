@@ -1,4 +1,4 @@
-"""Fig.1: Fyree 구조도 + TeleViT 대비 인셋. 제목 없음, 영어."""
+"""Fig.1: Pyree 구조도 + TeleViT 대비 인셋. 제목 없음, 영어."""
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
@@ -29,7 +29,7 @@ def arrow(x0, y0, x1, y1, ls="-", color="0.25", rad=0.0, lw=0.9):
 
 
 # ---------------- 입력 (왼쪽) ----------------
-ax.text(61.25, 62.2, "Fyree: slow–fast transformer (21.0 M parameters)\none model for all lead times", ha="center", va="center",
+ax.text(61.25, 62.2, "Pyree: slow–fast transformer (21.0 M parameters)\none model for all lead times", ha="center", va="center",
         fontsize=7.2, fontweight="bold", color="#c0392b")
 ax.text(10.5, 62.2, "Inputs at issue time t − h\n(80 × 80 local patch, 0.25°)", ha="center",
         va="top", fontsize=7, fontweight="bold")

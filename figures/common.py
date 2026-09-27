@@ -6,8 +6,8 @@ from pathlib import Path
 import matplotlib as mpl
 import numpy as np
 
-ROOT = Path(os.environ.get("FYREE_ROOT", Path(__file__).resolve().parents[1]))
-RUNS = Path(os.environ.get("FYREE_RUNS", ROOT / "runs"))
+ROOT = Path(os.environ.get("PYREE_ROOT", Path(__file__).resolve().parents[1]))
+RUNS = Path(os.environ.get("PYREE_RUNS", ROOT / "runs"))
 OUT = ROOT / "outputs" / "figures"
 OUT.mkdir(parents=True, exist_ok=True)
 LEADS = [1, 2, 4, 8, 16]
@@ -28,10 +28,10 @@ COLORS = {
 }
 
 NAME = {
-    "ours": "Fyree",
-    "ours_anchor": "Fyree, logit-anchored",
+    "ours": "Pyree",
+    "ours_anchor": "Pyree, logit-anchored",
     "televit_repro": r"TeleViT$_{i,g}$ (reproduced)",
-    "televit_info": r"TeleViT$_{i,g}$ backbone + Fyree inputs",
+    "televit_info": r"TeleViT$_{i,g}$ backbone + Pyree inputs",
     "clim_recency": "Climatology (recency-weighted)",
     "clim_uniform": "Climatology (2002–2017 mean)",
 }

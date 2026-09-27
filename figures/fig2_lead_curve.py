@@ -38,8 +38,8 @@ ax.grid(axis="y", lw=0.4, alpha=0.4)
 panel_label(ax, "a", x=-0.16)
 
 # (b) 짝지은 격차 + 95% CI
-pairs = [("A-B", "Fyree − TeleViT$_{i,g}$ (reproduced)", COLORS["televit_repro"], -0.12),
-         ("A-clim", "Fyree − climatology", COLORS["clim_recency"], 0.0),
+pairs = [("A-B", "Pyree − TeleViT$_{i,g}$ (reproduced)", COLORS["televit_repro"], -0.12),
+         ("A-clim", "Pyree − climatology", COLORS["clim_recency"], 0.0),
          ("B-clim", "TeleViT$_{i,g}$ (reproduced) − climatology", COLORS["televit_info"], 0.12)]
 for key, lab, col, dx in pairs:
     m = np.array([bt[h][key] for h in LEADS])

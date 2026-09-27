@@ -7,7 +7,7 @@
   recent_k  : T-h 이전 k스텝 동안의 화재 빈도
   lastyear  : 1년 전 같은 슬롯(T-46)의 화재 여부 (T-46 <= T-h 이므로 h<=46이면 발행 시점에 관측됨)
 
-사용: python -m fyree.baselines --split val
+사용: python -m pyree.baselines --split val
 """
 import os
 import argparse

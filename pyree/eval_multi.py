@@ -2,7 +2,7 @@
 store는 모든 런의 상위 집합(anomaly+global)으로 한 번만 로드하고, 런마다 자기 입력 설정으로
 데이터셋을 만든다. prior 설정(sigma, w, tau)이 store와 다른 런은 건너뛴다.
 
-사용: python -m fyree.eval_multi --split test2020 --runs v4_noanchor televit_orig_h1 ...
+사용: python -m pyree.eval_multi --split test2020 --runs v4_noanchor televit_orig_h1 ...
 """
 import os
 import argparse
@@ -12,13 +12,13 @@ from pathlib import Path
 import torch
 from torch.utils.data import DataLoader
 
-from fyree import train_v2 as TR
-from fyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
-from fyree.eval_ckpt import DEFAULTS
-from fyree.model import WildfireStepsNet
-from fyree.model_televit import TeleViT
+from pyree import train_v2 as TR
+from pyree.dataset_v2 import OCI_VARS, SeasFireStore, SeasFireV2, variables
+from pyree.eval_ckpt import DEFAULTS
+from pyree.model import WildfireStepsNet
+from pyree.model_televit import TeleViT
 
-RUNS = Path(os.environ.get("FYREE_RUNS", "runs"))
+RUNS = Path(os.environ.get("PYREE_RUNS", "runs"))
 
 
 def main():
